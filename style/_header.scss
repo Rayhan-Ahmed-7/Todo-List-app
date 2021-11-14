@@ -1,0 +1,102 @@
+h2{
+    font-size:4rem;
+    font-family: 'Road Rage', cursive;
+}
+.top-content{
+    width:400px;
+    border-radius:10px;
+    @include flex(center,center,column);
+    padding:30px;
+    background-color:#ecf0f3;
+    text-align: center;
+    box-shadow:$boxShadowOut;
+
+    h2{
+        background:linear-gradient(to right, rgb(221, 187, 36) , rgb(212, 46, 46));
+        -webkit-text-fill-color:transparent;
+        -webkit-background-clip:text;
+        margin-bottom:20px;
+    }
+
+    select{
+        appearance:none;
+        outline:none;
+        border:none;
+        color:#838383;
+        width:10rem;
+        cursor:pointer;
+        padding:10px 20px;
+        border-radius:5px;
+        font-size:16px;
+        outline:none;
+
+        option{
+            color:#555;
+        }
+    }
+
+
+    .select{
+        margin:0 0 1.5rem 0;
+        position:relative;
+        overflow:hidden;
+        box-shadow: $boxShadowOut1;
+
+        &:hover::after{
+            background:white;
+            color:#ff6f47;
+        }
+    }
+    .select::after{
+        content:'\25bc';
+        position:absolute;
+        background:#ff6f47; 
+        top:0;
+        right:0;
+        padding:10px 10px;
+        font-size:20px;
+        color:white;
+        pointer-events:none;
+        border-radius:0px 5px 5px 5px;
+        transition:all .5s ease;
+        
+    }
+    form{
+        border-radius:8px;
+        box-shadow:$boxShadowIn;
+        
+        
+    }
+    form{
+        display:flex;
+    }
+    form input{
+        width:100%;
+    }
+
+    .todo-input,form button{
+        border:none;
+        outline:none;
+        background:none;
+        padding:10px 15px;
+        color:#555;
+        font-family:'Bebas Neue', cursive;
+        font-size:25px;
+    }
+    form button{
+        color:rgb(218, 56, 56);
+        cursor:pointer;
+        
+        &:hover{
+            color:rgba(218, 56, 56, 0.829);
+        }
+    }
+}
+@media only screen and (max-width: 500px){
+    .top-content{
+          width:330px;
+
+          
+      }
+      
+  }

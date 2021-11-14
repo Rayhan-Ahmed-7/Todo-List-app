@@ -1,0 +1,25 @@
+$boxShadowIn:inset -7px -7px 15px #ececec,
+                inset 7px 7px 15px #c0c5c9;
+$boxShadowOut:-13px -13px 20px #ffffff,
+                13px 13px 20px #cbced1;
+$boxShadowOut1:-5px -5px 15px #ffffff,
+            5px 5px 15px #c0c2c5;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    background-color:#ecf0f3;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+}
+@mixin flex($justify,$align,$fdirection) {
+    display:flex;
+    justify-content:$justify;
+    align-items:$align;
+    flex-direction:$fdirection;
+  }

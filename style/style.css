@@ -1,0 +1,241 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #ecf0f3;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+h2 {
+  font-size: 4rem;
+  font-family: 'Road Rage', cursive;
+}
+
+.top-content {
+  width: 400px;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 30px;
+  background-color: #ecf0f3;
+  text-align: center;
+  -webkit-box-shadow: -13px -13px 20px #ffffff, 13px 13px 20px #cbced1;
+          box-shadow: -13px -13px 20px #ffffff, 13px 13px 20px #cbced1;
+}
+
+.top-content h2 {
+  background: -webkit-gradient(linear, left top, right top, from(#ddbb24), to(#d42e2e));
+  background: linear-gradient(to right, #ddbb24, #d42e2e);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  margin-bottom: 20px;
+}
+
+.top-content select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+  border: none;
+  color: #838383;
+  width: 10rem;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+}
+
+.top-content select option {
+  color: #555;
+}
+
+.top-content .select {
+  margin: 0 0 1.5rem 0;
+  position: relative;
+  overflow: hidden;
+  -webkit-box-shadow: -5px -5px 15px #ffffff, 5px 5px 15px #c0c2c5;
+          box-shadow: -5px -5px 15px #ffffff, 5px 5px 15px #c0c2c5;
+}
+
+.top-content .select:hover::after {
+  background: white;
+  color: #ff6f47;
+}
+
+.top-content .select::after {
+  content: '\25bc';
+  position: absolute;
+  background: #ff6f47;
+  top: 0;
+  right: 0;
+  padding: 10px 10px;
+  font-size: 20px;
+  color: white;
+  pointer-events: none;
+  border-radius: 0px 5px 5px 5px;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.top-content form {
+  border-radius: 8px;
+  -webkit-box-shadow: inset -7px -7px 15px #ececec, inset 7px 7px 15px #c0c5c9;
+          box-shadow: inset -7px -7px 15px #ececec, inset 7px 7px 15px #c0c5c9;
+}
+
+.top-content form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.top-content form input {
+  width: 100%;
+}
+
+.top-content .todo-input, .top-content form button {
+  border: none;
+  outline: none;
+  background: none;
+  padding: 10px 15px;
+  color: #555;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 25px;
+}
+
+.top-content form button {
+  color: #da3838;
+  cursor: pointer;
+}
+
+.top-content form button:hover {
+  color: rgba(218, 56, 56, 0.829);
+}
+
+@media only screen and (max-width: 500px) {
+  .top-content {
+    width: 330px;
+  }
+}
+
+.todo-container {
+  margin-top: 30px;
+  background-color: #ecf0f3;
+  -webkit-box-shadow: -13px -13px 20px #ffffff, 13px 13px 20px #cbced1;
+          box-shadow: -13px -13px 20px #ffffff, 13px 13px 20px #cbced1;
+  padding: 30px;
+  width: 400px;
+  border-radius: 10px;
+}
+
+.todo-container .newTodo {
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 8px 0px;
+  -webkit-box-shadow: -5px -5px 15px #ffffff, 5px 5px 15px #c0c2c5;
+          box-shadow: -5px -5px 15px #ffffff, 5px 5px 15px #c0c2c5;
+  font-size: 20px;
+  list-style: none;
+  font-family: 'Bebas Neue', cursive;
+  -webkit-transform-origin: 5% 50%;
+          transform-origin: 5% 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: 0;
+          flex-direction: 0;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.todo-container .newTodo li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0px 10px;
+}
+
+.todo-container .newTodo .complete-btn,
+.todo-container .newTodo .delete-btn {
+  border: none;
+  cursor: pointer;
+  background: #ff6f47;
+  color: white;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.todo-container .newTodo .complete-btn:hover,
+.todo-container .newTodo .delete-btn:hover {
+  background: #ff6f47ca;
+}
+
+.todo-container .newTodo .complete-btn .fa-trash,
+.todo-container .newTodo .complete-btn .fa-check,
+.todo-container .newTodo .delete-btn .fa-trash,
+.todo-container .newTodo .delete-btn .fa-check {
+  pointer-events: none;
+}
+
+.todo-container .newTodo .complete-btn {
+  background: #1ab957;
+}
+
+.todo-container .newTodo .complete-btn:hover {
+  background: rgba(26, 185, 87, 0.774);
+}
+
+.todo-container .completed {
+  text-decoration: line-through;
+  opacity: .5;
+}
+
+.todo-container .fall {
+  -webkit-transform: rotate(20deg);
+          transform: rotate(20deg);
+  opacity: 0;
+}
+
+@media only screen and (max-width: 500px) {
+  .todo-container {
+    width: 330px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
